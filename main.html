@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcard Game</title>
+    <title>CodeFlash</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -45,53 +45,156 @@
       }
       .navigation {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 10px;
         margin-top: 20px;
       }
     </style>
   </head>
   <body>
     <div class="card">
-      <div class="question" id="question">Click to reveal the question</div>
+      <div class="question" id="question">
+        Click "Question" to reveal a question
+      </div>
       <div class="answer" id="answer">Answer will appear here</div>
-      <button onclick="revealAnswer()">Show Answer</button>
       <div class="navigation">
-        <button onclick="prevCard()">Previous</button>
-        <button onclick="nextCard()">Next</button>
+        <button onclick="displayRandomQuestion()">Question</button>
+        <button onclick="revealAnswer()">Answer</button>
       </div>
     </div>
 
     <script>
-      // Sample questions and answers
+      // Updated questions and answers for Sprint 10 - Chapter 3
       const flashcards = [
         {
           question:
-            "How do event handlers like onClick differ in JSX compared to standard HTML?",
+            "What script tags are necessary to add React to an existing HTML page?",
           answer:
-            "In JSX, event handlers are camelCase (e.g., onClick), and they refer to JavaScript functions directly.",
+            "react.development.js, react-dom.development.js, and babel.min.js.",
         },
         {
-          question: "Who wrote 'To Kill a Mockingbird'?",
-          answer: "Harper Lee",
+          question: "What is the purpose of the ReactDOM.render() function?",
+          answer: "To render JSX to the specified DOM element.",
         },
-        { question: "What is the chemical symbol for water?", answer: "H2O" },
-        { question: "How many continents are there?", answer: "Seven" },
         {
-          question: "What is the speed of light?",
-          answer: "Approximately 299,792 km per second",
+          question: "Why is the babel.min.js script included when using JSX?",
+          answer: "To translate JSX into standard JavaScript syntax.",
         },
+        {
+          question:
+            "In ReactDOM.render(), what do the first and second parameters represent?",
+          answer:
+            "The first is the JSX to render, and the second is the DOM element to render into.",
+        },
+        {
+          question:
+            "How do you include JavaScript expressions within JSX code?",
+          answer: "By placing them inside curly braces {}.",
+        },
+
+        {
+          question:
+            "How is interactivity handled in the provided example code?",
+          answer:
+            "By adding a click event listener to update the state and re-render.",
+        },
+        {
+          question: "What does the ternary operator ?: allow you to do in JSX?",
+          answer:
+            "Insert conditional statements with different outputs based on conditions.",
+        },
+        {
+          question: "What does JSX allow you to do that pure HTML does not?",
+          answer:
+            "Combine HTML-like syntax with JavaScript logic in the same code structure.",
+        },
+        {
+          question: "Why are parentheses often used when writing JSX?",
+          answer: "To separate code from layout for cleaner readability.",
+        },
+        {
+          question: "How does the && operator work in JSX?",
+          answer:
+            "It conditionally renders JSX only if the condition before && is true.",
+        },
+        {
+          question: "How do you assign CSS classes in JSX?",
+          answer:
+            "By using className instead of class, since class is a reserved JavaScript keyword.",
+        },
+        {
+          question: "What style format is used in JSX when setting CSS styles?",
+          answer:
+            "Inline styles are written as JavaScript objects with camelCase property names.",
+        },
+        {
+          question:
+            "Why might px not be needed for certain style properties in JSX?",
+          answer:
+            "React automatically appends px to numeric values for some style properties.",
+        },
+        {
+          question: "What is the purpose of a React fragment?",
+          answer:
+            "To wrap multiple elements without adding extra <div> tags to the DOM.",
+        },
+        {
+          question:
+            "How can you use React fragments without importing React.Fragment?",
+          answer: "By using empty tags <>...</> as shorthand for fragments.",
+        },
+        {
+          question:
+            "How should self-closing tags like <img> be written in JSX?",
+          answer: "With a trailing slash, e.g., <img />.",
+        },
+        {
+          question: "When can you use self-closing syntax for tags in JSX?",
+          answer:
+            "When the tag has no content, such as <div /> instead of <div></div>.",
+        },
+        {
+          question:
+            "What JSX method is commonly used to loop through arrays to display list items?",
+          answer: "The map() method.",
+        },
+        {
+          question:
+            "Why is it important to use a key attribute for list items in JSX?",
+          answer:
+            "To uniquely identify each item and help React track changes, ensuring correct order during re-renders.",
+        },
+        {
+          question:
+            "In the example, which data field is used as the key for each message in the list?",
+          answer: "message.id",
+        },
+        {
+          question: "What does React do if list items lack unique keys?",
+          answer:
+            "React may reorder items incorrectly, potentially breaking the application, and it will show a console warning.",
+        },
+        // Add all other questions and answers here...
       ];
 
       let currentCardIndex = 0;
 
-      function displayCard(index) {
+      function displayRandomQuestion() {
         const questionElement = document.getElementById("question");
         const answerElement = document.getElementById("answer");
 
-        // Display the current question and hide the answer
-        questionElement.textContent = flashcards[index].question;
+        // Generate a random index different from the current one
+        let randomIndex;
+        do {
+          randomIndex = Math.floor(Math.random() * flashcards.length);
+        } while (randomIndex === currentCardIndex);
+
+        currentCardIndex = randomIndex;
+
+        // Display the question and hide the answer
+        questionElement.textContent = flashcards[currentCardIndex].question;
         answerElement.style.display = "none";
-        answerElement.textContent = flashcards[index].answer;
+        answerElement.textContent = flashcards[currentCardIndex].answer;
       }
 
       function revealAnswer() {
@@ -100,27 +203,9 @@
         answerElement.style.display = "block";
       }
 
-      function nextCard() {
-        if (currentCardIndex < flashcards.length - 1) {
-          currentCardIndex++;
-        } else {
-          currentCardIndex = 0; // Wrap around to the first card
-        }
-        displayCard(currentCardIndex);
-      }
-
-      function prevCard() {
-        if (currentCardIndex > 0) {
-          currentCardIndex--;
-        } else {
-          currentCardIndex = flashcards.length - 1; // Wrap around to the last card
-        }
-        displayCard(currentCardIndex);
-      }
-
-      // Display the first card on load
+      // Initialize with the first question
       window.onload = () => {
-        displayCard(currentCardIndex);
+        displayRandomQuestion();
       };
     </script>
   </body>
