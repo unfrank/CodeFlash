@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 300px;
+        width: 90%;
+      }
+      .question {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      .answer {
+        display: none;
+        margin-top: 20px;
+        font-size: 1em;
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="question" id="question">Click to reveal the question</div>
+      <div class="answer" id="answer">Answer will appear here</div>
+      <button onclick="revealAnswer()">Show Answer</button>
+      <div class="navigation">
+        <button onclick="prevCard()">Previous</button>
+        <button onclick="nextCard()">Next</button>
+      </div>
+    </div>
+
+    <script>
+      // Sample questions and answers
+      const flashcards = [
+        {
+          question:
+            "How do event handlers like onClick differ in JSX compared to standard HTML?",
+          answer:
+            "In JSX, event handlers are camelCase (e.g., onClick), and they refer to JavaScript functions directly.",
+        },
+        {
+          question: "Who wrote 'To Kill a Mockingbird'?",
+          answer: "Harper Lee",
+        },
+        { question: "What is the chemical symbol for water?", answer: "H2O" },
+        { question: "How many continents are there?", answer: "Seven" },
+        {
+          question: "What is the speed of light?",
+          answer: "Approximately 299,792 km per second",
+        },
+      ];
+
+      let currentCardIndex = 0;
+
+      function displayCard(index) {
+        const questionElement = document.getElementById("question");
+        const answerElement = document.getElementById("answer");
+
+        // Display the current question and hide the answer
+        questionElement.textContent = flashcards[index].question;
+        answerElement.style.display = "none";
+        answerElement.textContent = flashcards[index].answer;
+      }
+
+      function revealAnswer() {
+        const answerElement = document.getElementById("answer");
+        // Show the answer when the button is clicked
+        answerElement.style.display = "block";
+      }
+
+      function nextCard() {
+        if (currentCardIndex < flashcards.length - 1) {
+          currentCardIndex++;
+        } else {
+          currentCardIndex = 0; // Wrap around to the first card
+        }
+        displayCard(currentCardIndex);
+      }
+
+      function prevCard() {
+        if (currentCardIndex > 0) {
+          currentCardIndex--;
+        } else {
+          currentCardIndex = flashcards.length - 1; // Wrap around to the last card
+        }
+        displayCard(currentCardIndex);
+      }
+
+      // Display the first card on load
+      window.onload = () => {
+        displayCard(currentCardIndex);
+      };
+    </script>
+  </body>
+</html>
