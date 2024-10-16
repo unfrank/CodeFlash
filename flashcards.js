@@ -411,4 +411,50 @@ export const flashcards = [
     answer:
       "Organize components in components/, images in assets/animals/, and utilities in utils/constants.js.",
   },
+  {
+    question: "What does the useState hook return?",
+    answer:
+      "An array with the current state value and a function to update it.",
+  },
+  {
+    question: "How do you initialize a state variable with useState?",
+    answer: "Pass the initial value as an argument to useState.",
+  },
+  {
+    question:
+      "What is the purpose of the setter function returned by useState?",
+    answer: "To update the state value and trigger a re-render.",
+  },
+  {
+    question: "Why should useState not be used inside loops or conditionals?",
+    answer: "Because it must be called in the same order every render.",
+  },
+  {
+    question:
+      "How do you update an array state without mutating the original array?",
+    answer: "Use the spread operator to create a new array.",
+  },
+  {
+    question: "Can useState manage multiple pieces of state in one component?",
+    answer:
+      "Yes, you can call useState multiple times for different state variables.",
+  },
+  {
+    question: "Why is destructuring used with useState?",
+    answer:
+      "To assign meaningful names to the state value and setter function.",
+  },
+  {
+    question: "What happens when you call the setter function from useState?",
+    answer: "The component re-renders with the updated state.",
+  },
+  {
+    question: "What types of values can be stored in useState?",
+    answer: "Any data type, including numbers, strings, objects, and arrays.",
+  },
+  {
+    question:
+      "What is the main rule for the placement of useState in a component?",
+    answer: "It should be placed only at the top level of the component.",
+  },
 ];
