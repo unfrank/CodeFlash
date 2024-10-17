@@ -1869,4 +1869,46 @@ export const flashcards = [
     answer:
       "Be specific, focus on behavior, and provide suggestions for improvement.",
   },
+  {
+    question: "What is the useEffect Hook?",
+    answer:
+      "A Hook that lets you perform side effects in functional components.",
+  },
+  {
+    question: "When does useEffect run by default?",
+    answer: "After every render of the component.",
+  },
+  {
+    question: "How do you make useEffect run only once?",
+    answer: "Provide an empty dependency array as the second argument.",
+  },
+  {
+    question: "What does the dependency array in useEffect do?",
+    answer: "It controls when the effect re-runs by tracking specific values.",
+  },
+  {
+    question: "What happens if you omit the dependency array?",
+    answer: "useEffect will run after every render of the component.",
+  },
+  {
+    question: "How do you clean up effects in useEffect?",
+    answer: "Return a cleanup function from the effect.",
+  },
+  {
+    question: "Can you use multiple useEffect Hooks in a component?",
+    answer:
+      "Yes, you can use multiple useEffect Hooks to handle different effects.",
+  },
+  {
+    question: "How do you make useEffect run when a specific value changes?",
+    answer: "Add that value to the dependency array.",
+  },
+  {
+    question: "What types of side effects is useEffect used for?",
+    answer: "Data fetching, DOM updates, subscriptions, and timers.",
+  },
+  {
+    question: "What does the cleanup function do?",
+    answer: "It runs on unmount or before re-running the effect.",
+  },
 ];
