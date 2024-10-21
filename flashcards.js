@@ -2155,4 +2155,105 @@ export const flashcards = [
     answer:
       "Yes, by assigning a function to a new or existing property of the object.",
   },
+  {
+    question: "What is explicit binding in JavaScript?",
+    answer:
+      "Explicit binding allows us to manually set the value of 'this' using methods like call(), apply(), and bind().",
+  },
+  {
+    question: "What does the call() method do?",
+    answer:
+      "call() invokes a function and explicitly sets 'this' to a provided value, with arguments passed individually.",
+  },
+  {
+    question: "How is the apply() method different from call()?",
+    answer:
+      "apply() works like call(), but it takes arguments as an array instead of individually.",
+  },
+  {
+    question: "What does the bind() method do?",
+    answer:
+      "bind() creates a new function with 'this' bound to a specific value, but does not immediately invoke it.",
+  },
+  {
+    question: "How do you use call() to set 'this' in a function?",
+    answer:
+      "Invoke call() on the function and pass the desired 'this' value as the first argument.",
+  },
+  {
+    question: "What is the difference between call() and bind()?",
+    answer:
+      "call() invokes the function immediately, while bind() returns a new function that can be invoked later.",
+  },
+  {
+    question: "Can you pass additional arguments to call()?",
+    answer:
+      "Yes, call() accepts additional arguments after the first one, which are passed to the invoked function.",
+  },
+  {
+    question: "How are arguments passed to apply()?",
+    answer: "In apply(), arguments are passed as an array.",
+  },
+  {
+    question: "What is the use case for apply() over call()?",
+    answer:
+      "apply() is useful when arguments are in an array or when you don't know the number of arguments in advance.",
+  },
+  {
+    question: "How do you create a partially applied function using bind()?",
+    answer:
+      "Use bind() to pre-set some arguments, returning a new function that can be called with the remaining arguments.",
+  },
+  {
+    question: "What is 'this' inside a function when using call()?",
+    answer:
+      "'this' refers to the value explicitly provided as the first argument to call().",
+  },
+  {
+    question: "What does bind() return?",
+    answer:
+      "bind() returns a new function with 'this' bound to the specified value.",
+  },
+  {
+    question: "Can you use call() or apply() with methods from other objects?",
+    answer:
+      "Yes, call() and apply() allow you to borrow methods from one object and use them on another.",
+  },
+  {
+    question:
+      "What happens when call() is used on a function without arguments?",
+    answer:
+      "The function is invoked with 'this' set to the provided value, but no additional arguments are passed.",
+  },
+  {
+    question: "Can apply() handle an indefinite number of arguments?",
+    answer:
+      "Yes, since apply() accepts an array, it can handle any number of arguments within that array.",
+  },
+  {
+    question: "What happens if no arguments are passed to call() or apply()?",
+    answer:
+      "'this' will default to the global object (window in browsers) or be undefined in strict mode.",
+  },
+  {
+    question: "What is function borrowing using call() or apply()?",
+    answer:
+      "Function borrowing allows you to use a method from one object on another by explicitly setting 'this'.",
+  },
+  {
+    question: "How does bind() affect the original function?",
+    answer:
+      "bind() does not change the original function; it returns a new function with a specific 'this' value.",
+  },
+  {
+    question:
+      "Can you pass arguments when invoking a function created with bind()?",
+    answer:
+      "Yes, you can pass additional arguments when calling the function returned by bind().",
+  },
+  {
+    question: "Why is bind() useful in event handling?",
+    answer:
+      "bind() is useful in event handling to ensure that 'this' refers to the desired context, like an object instance.",
+  },
 ];
