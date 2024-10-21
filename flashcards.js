@@ -1911,4 +1911,248 @@ export const flashcards = [
     question: "What does the cleanup function do?",
     answer: "It runs on unmount or before re-running the effect.",
   },
+  {
+    question: "What is an effect dependency?",
+    answer:
+      "A value that useEffect watches to determine when to re-run the effect.",
+  },
+  {
+    question: "How do you specify dependencies for useEffect?",
+    answer:
+      "Pass an array of dependencies as the second argument to useEffect.",
+  },
+  {
+    question: "What happens when a dependency changes?",
+    answer: "The effect re-runs to reflect the updated dependency.",
+  },
+  {
+    question: "What does an empty dependency array signify?",
+    answer: "It indicates that the effect should run only once, on mount.",
+  },
+  {
+    question: "How can you make an effect run on every render?",
+    answer: "Omit the dependency array entirely.",
+  },
+  {
+    question: "What should you include in the dependency array?",
+    answer: "Any variables or props used inside the effect function.",
+  },
+  {
+    question: "What are stale closures in the context of useEffect?",
+    answer:
+      "When an effect uses outdated variables because dependencies weren't specified.",
+  },
+  {
+    question:
+      "Why is it important to include state variables in the dependency array?",
+    answer:
+      "To ensure the effect re-runs when state changes, avoiding stale data.",
+  },
+  {
+    question: "What happens if you list a function as a dependency?",
+    answer: "The effect re-runs each time the function reference changes.",
+  },
+  {
+    question: "How can you avoid unnecessary re-runs of an effect?",
+    answer:
+      "List only the necessary dependencies, not functions or values that don’t change.",
+  },
+  {
+    question:
+      "When should a variable be specified in an effect’s dependency array in React?",
+    answer:
+      "A variable should be specified in an effect's dependencies if we want the effect to receive this variable's updated value whenever it changes.",
+  },
+
+  {
+    question: "What is 'use strict' in JavaScript?",
+    answer:
+      "'use strict' is a directive that enforces stricter parsing and error handling in JavaScript.",
+  },
+  {
+    question: "Where can 'use strict' be applied?",
+    answer: "'use strict' can be applied globally or to individual functions.",
+  },
+  {
+    question:
+      "What happens if you assign to an undeclared variable in strict mode?",
+    answer:
+      "Strict mode throws an error if you assign to an undeclared variable.",
+  },
+  {
+    question: "Can strict mode catch common coding mistakes?",
+    answer:
+      "Yes, strict mode catches silent errors like assigning to read-only properties.",
+  },
+  {
+    question: "Does strict mode allow the use of 'with' statements?",
+    answer: "No, strict mode disallows the use of 'with' statements.",
+  },
+  {
+    question: "What happens to 'this' in a function under strict mode?",
+    answer:
+      "'this' is undefined in functions not called as methods, instead of defaulting to the global object.",
+  },
+  {
+    question: "Can strict mode be used in ES6 modules?",
+    answer: "Yes, strict mode is enabled by default in ES6 modules.",
+  },
+  {
+    question:
+      "What does strict mode do to duplicate parameter names in functions?",
+    answer:
+      "Strict mode throws an error for functions with duplicate parameter names.",
+  },
+  {
+    question: "Does strict mode allow deleting variables or functions?",
+    answer:
+      "No, strict mode throws an error when attempting to delete variables or functions.",
+  },
+  {
+    question: "Can strict mode improve performance?",
+    answer:
+      "Yes, strict mode may improve performance as it enables optimizations in JavaScript engines.",
+  },
+  {
+    question: "What is 'this' in JavaScript?",
+    answer: "'this' refers to the context in which the function is executed.",
+  },
+  {
+    question: "What does 'this' refer to in the global scope?",
+    answer:
+      "In non-strict mode, 'this' refers to the global object (window in browsers).",
+  },
+  {
+    question: "What does 'this' refer to inside an object method?",
+    answer: "'this' refers to the object that the method belongs to.",
+  },
+  {
+    question:
+      "What does 'this' refer to in a function declared inside a method?",
+    answer: "It refers to the global object or undefined in strict mode.",
+  },
+  {
+    question: "How does 'this' behave in arrow functions?",
+    answer:
+      "Arrow functions inherit 'this' from the surrounding lexical context.",
+  },
+  {
+    question: "What does 'this' refer to in a constructor function?",
+    answer: "'this' refers to the newly created instance of the object.",
+  },
+  {
+    question: "How can you change the value of 'this' in a function?",
+    answer: "You can change 'this' using call(), apply(), or bind().",
+  },
+  {
+    question: "What does 'this' refer to in an event handler in the browser?",
+    answer: "'this' refers to the DOM element that triggered the event.",
+  },
+  {
+    question: "What is the value of 'this' in strict mode inside a function?",
+    answer: "In strict mode, 'this' is undefined in standalone functions.",
+  },
+  {
+    question:
+      "What happens if 'this' is used inside a method and then passed to another function?",
+    answer:
+      "'this' loses its context and may refer to the global object unless explicitly bound.",
+  },
+  {
+    question: "How do you permanently bind 'this' to a specific context?",
+    answer:
+      "You can use the bind() method to create a new function with 'this' bound.",
+  },
+  {
+    question: "How is 'this' determined in a method passed as a callback?",
+    answer:
+      "It depends on how the callback is called; 'this' may be lost or changed.",
+  },
+  {
+    question: "What does 'this' refer to in a class method?",
+    answer: "'this' refers to the instance of the class.",
+  },
+  {
+    question: "Can 'this' be reassigned?",
+    answer:
+      "No, but its value can be changed using call(), apply(), or bind().",
+  },
+  {
+    question:
+      "What does 'this' refer to in setTimeout or setInterval callbacks?",
+    answer:
+      "'this' refers to the global object unless the callback is an arrow function.",
+  },
+  {
+    question:
+      "How is 'this' determined when a function is called as a method of an object?",
+    answer: "'this' refers to the object that the method is called on.",
+  },
+  {
+    question:
+      "What is the difference between call() and apply() when changing 'this'?",
+    answer:
+      "Both change 'this', but call() takes arguments individually, while apply() takes them as an array.",
+  },
+  {
+    question: "How does 'this' behave in an object’s prototype method?",
+    answer:
+      "'this' refers to the object instance that calls the prototype method.",
+  },
+  {
+    question: "How can 'this' cause problems in event listeners?",
+    answer:
+      "It may not refer to the expected object if the method loses its context.",
+  },
+  {
+    question: "What is the value of 'this' inside a static method in a class?",
+    answer: "'this' refers to the class itself, not an instance.",
+  },
+  {
+    question: "How do you call an object method using dot notation?",
+    answer:
+      "By using the object name followed by the method name with parentheses.",
+  },
+  {
+    question: "How do you call an object method using bracket notation?",
+    answer:
+      "By accessing the method using the object and method name as a string inside brackets.",
+  },
+  {
+    question: "What happens if you call a method without parentheses?",
+    answer: "The function reference is returned without being executed.",
+  },
+  {
+    question:
+      "Can you pass an object method as an argument to another function?",
+    answer: "Yes, but 'this' may lose its context unless it's bound correctly.",
+  },
+  {
+    question: "What is a method in the context of an object?",
+    answer: "A function that is defined as a property of an object.",
+  },
+  {
+    question: "What does 'this' refer to inside an object method?",
+    answer: "'this' refers to the object that owns the method.",
+  },
+  {
+    question: "How can you call a method dynamically using a variable?",
+    answer:
+      "Use bracket notation with the variable that contains the method name.",
+  },
+  {
+    question: "What happens when a method is called on an undefined object?",
+    answer:
+      "A runtime error occurs because the method can't be accessed on undefined.",
+  },
+  {
+    question: "How do you use call() to invoke an object method?",
+    answer:
+      "Use object.method.call(thisArg, arg1, arg2) to set 'this' to a specific context.",
+  },
+  {
+    question: "Can an object method be added after the object is created?",
+    answer:
+      "Yes, by assigning a function to a new or existing property of the object.",
+  },
 ];
