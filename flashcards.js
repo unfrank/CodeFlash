@@ -2256,4 +2256,160 @@ export const flashcards = [
     answer:
       "bind() is useful in event handling to ensure that 'this' refers to the desired context, like an object instance.",
   },
+  {
+    question: "What is the purpose of the new operator in JavaScript?",
+    answer:
+      "The new operator creates an instance of a user-defined object or one of the built-in object types.",
+  },
+  {
+    question: "What does the new operator return?",
+    answer:
+      "It returns a newly created object, which is an instance of the constructor function.",
+  },
+  {
+    question: "What are the steps performed by the new operator?",
+    answer:
+      "It creates a new object, sets its prototype, binds 'this', and returns the object.",
+  },
+  {
+    question: "How does new set the prototype of the object?",
+    answer:
+      "It sets the prototype of the new object to the constructor function's prototype property.",
+  },
+  {
+    question: "What happens to 'this' inside the constructor when using new?",
+    answer:
+      "'this' refers to the newly created object inside the constructor function.",
+  },
+  {
+    question:
+      "What happens if a constructor function explicitly returns an object?",
+    answer:
+      "The object explicitly returned by the constructor replaces the default object created by new.",
+  },
+  {
+    question: "What if the constructor returns a primitive value?",
+    answer:
+      "The primitive return value is ignored, and the newly created object is returned instead.",
+  },
+  {
+    question: "Can the new operator be used with built-in constructors?",
+    answer:
+      "Yes, it can be used with built-in constructors like Object, Array, or Date.",
+  },
+  {
+    question:
+      "What does the new operator do to the constructor function's prototype?",
+    answer:
+      "It assigns the constructor's prototype to the __proto__ of the new object.",
+  },
+  {
+    question: "Why is the new operator necessary in object creation?",
+    answer:
+      "It ensures the correct prototype chain and allows constructors to initialize objects with properties and methods.",
+  },
+  {
+    question: "What is an arrow function in JavaScript?",
+    answer:
+      "An arrow function is a shorthand way to write a function expression using the '=>' syntax.",
+  },
+  {
+    question:
+      "How do arrow functions differ from regular functions in terms of 'this'?",
+    answer:
+      "Arrow functions don't have their own 'this'; they inherit 'this' from the surrounding scope.",
+  },
+  {
+    question: "Can arrow functions be used as constructors?",
+    answer:
+      "No, arrow functions cannot be used as constructors and will throw an error if used with 'new'.",
+  },
+  {
+    question: "What is the syntax for a simple arrow function?",
+    answer:
+      "The syntax is: `(parameters) => expression`. For example, `(a, b) => a + b`.",
+  },
+  {
+    question: "What happens when you omit parentheses for a single parameter?",
+    answer:
+      "If there is only one parameter, the parentheses are optional. Example: `x => x * 2`.",
+  },
+  {
+    question:
+      "What happens when you omit the curly braces in an arrow function?",
+    answer:
+      "If curly braces are omitted, the function has an implicit return of the expression after the arrow.",
+  },
+  {
+    question: "Can arrow functions have default parameters?",
+    answer:
+      "Yes, arrow functions can have default parameters just like regular functions. Example: `(x = 10) => x * 2`.",
+  },
+  {
+    question: "How do arrow functions handle rest parameters?",
+    answer:
+      "Arrow functions can use rest parameters, just like regular functions. Example: `(...args) => args.length`.",
+  },
+  {
+    question:
+      "Can arrow functions have a return statement inside curly braces?",
+    answer:
+      "Yes, if you use curly braces, you need to explicitly return a value with the return statement.",
+  },
+  {
+    question: "What happens to the 'arguments' object in arrow functions?",
+    answer:
+      "Arrow functions do not have their own 'arguments' object; they inherit it from the surrounding scope.",
+  },
+  {
+    question: "Are arrow functions hoisted like regular functions?",
+    answer:
+      "No, arrow functions behave like function expressions and are not hoisted.",
+  },
+  {
+    question: "Can you use an arrow function as a method inside an object?",
+    answer:
+      "Arrow functions can be used as methods, but 'this' will not refer to the object, which can lead to unexpected behavior.",
+  },
+  {
+    question: "What is the benefit of arrow functions in callbacks?",
+    answer:
+      "Arrow functions simplify the syntax in callbacks and eliminate the need to bind 'this'.",
+  },
+  {
+    question: "Can arrow functions be used with async/await?",
+    answer:
+      "Yes, arrow functions can be used with async/await to simplify asynchronous code.",
+  },
+  {
+    question: "What is a common use case for arrow functions?",
+    answer:
+      "Arrow functions are commonly used in array methods like map, filter, and reduce for shorter syntax.",
+  },
+  {
+    question:
+      "What happens if you use the 'this' keyword inside an arrow function?",
+    answer:
+      "'this' inside an arrow function refers to the 'this' of the enclosing lexical scope, not the function itself.",
+  },
+  {
+    question: "Can arrow functions have multiple lines of code?",
+    answer:
+      "Yes, you can use curly braces for a block body, but you must explicitly return a value.",
+  },
+  {
+    question: "Can arrow functions have destructured parameters?",
+    answer:
+      "Yes, arrow functions can accept destructured parameters. Example: `({a, b}) => a + b`.",
+  },
+  {
+    question: "How are arrow functions different in terms of prototype?",
+    answer:
+      "Arrow functions don't have a 'prototype' property because they are not meant to be used as constructors.",
+  },
+  {
+    question: "Can arrow functions be anonymous?",
+    answer:
+      "Yes, arrow functions can be anonymous and are often used as inline callbacks.",
+  },
 ];
