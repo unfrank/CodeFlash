@@ -2412,4 +2412,106 @@ export const flashcards = [
     answer:
       "Yes, arrow functions can be anonymous and are often used as inline callbacks.",
   },
+  {
+    question:
+      "What does the 'this' keyword refer to when a function is called with the 'new' operator?",
+    answer: "'this' is bound to the newly created object.",
+  },
+  {
+    question:
+      "How does 'this' behave when a function is called using 'call()' or 'apply()'?",
+    answer: "'this' is bound to the object passed to these methods.",
+  },
+  {
+    question: "What happens when 'bind()' is used in relation to 'this'?",
+    answer: "'this' is bound to the object passed to 'bind()'.",
+  },
+  {
+    question: "What is the 'this' binding when calling a method on an object?",
+    answer: "'this' refers to the object whose method is being called.",
+  },
+  {
+    question:
+      "What does 'this' default to in strict mode when none of the binding rules apply?",
+    answer: "'this' is 'undefined' in strict mode.",
+  },
+  {
+    question:
+      "What does 'this' default to in sloppy mode when none of the binding rules apply?",
+    answer: "'this' refers to the global 'window' object in sloppy mode.",
+  },
+  {
+    question: "How is 'this' bound in an arrow function?",
+    answer:
+      "In an arrow function, 'this' is bound to the context in which the function is declared.",
+  },
+  {
+    question: "When is 'this' in an arrow function set?",
+    answer:
+      "'this' is set when the arrow function is declared, not when it is invoked.",
+  },
+  {
+    question: "Why can 'this' be confusing for even experienced engineers?",
+    answer:
+      "'this' behaves differently depending on how a function is called, which can lead to unexpected results.",
+  },
+  {
+    question: "What is the first rule of 'this' binding priority?",
+    answer:
+      "If a function is called with the 'new' operator, 'this' is bound to the newly created object.",
+  },
+  {
+    question:
+      "What happens to 'this' when a function is invoked using an object's method?",
+    answer: "'this' refers to the object that owns the method being called.",
+  },
+  {
+    question:
+      "How does 'this' behave in global execution context in sloppy mode?",
+    answer: "In sloppy mode, 'this' refers to the global 'window' object.",
+  },
+  {
+    question:
+      "What is the default value of 'this' in strict mode, when no specific binding applies?",
+    answer: "In strict mode, 'this' is 'undefined'.",
+  },
+  {
+    question:
+      "Why might junior developers struggle to explain how 'this' works?",
+    answer:
+      "The behavior of 'this' is complex and varies based on how a function is invoked, making it difficult for less experienced developers to grasp.",
+  },
+  {
+    question: "How can the value of 'this' be defined correctly?",
+    answer:
+      "The value of 'this' can be defined by examining the function's call site and how the function is invoked.",
+  },
+  {
+    question:
+      "In what situation does 'this' not follow the standard four binding rules?",
+    answer:
+      "Arrow functions do not follow the standard four binding rules, as 'this' is bound when the function is declared.",
+  },
+  {
+    question: "What is the second rule in determining 'this' binding?",
+    answer:
+      "If a function is called using 'call()', 'apply()', or 'bind()', 'this' is bound to the object passed to these methods.",
+  },
+  {
+    question:
+      "What is the key difference between arrow functions and regular functions in terms of 'this'?",
+    answer:
+      "In arrow functions, 'this' is bound at declaration, while in regular functions, 'this' is determined when the function is invoked.",
+  },
+  {
+    question: "How can understanding 'this' help a JS programmer grow?",
+    answer:
+      "Understanding how 'this' works is crucial to writing correct and efficient JavaScript code, especially in more advanced projects.",
+  },
+  {
+    question:
+      "What should you do if you're not fully confident with how 'this' works?",
+    answer:
+      "Keep practicing and remember that even experienced developers can find 'this' tricky; mastery comes with time and experience.",
+  },
 ];
