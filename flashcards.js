@@ -2514,4 +2514,61 @@ export const flashcards = [
     answer:
       "Keep practicing and remember that even experienced developers can find 'this' tricky; mastery comes with time and experience.",
   },
+  {
+    question: "What must be done to render an array of elements in React?",
+    answer:
+      "You must iterate with the map() method, provide a unique key property to each element, and wrap the rendered JSX in a single tag.",
+  },
+  {
+    question:
+      "What is the difference between imperative and declarative programming in React?",
+    answer:
+      "Imperative programming involves explicitly defining each step to achieve a result, while declarative programming focuses on describing the desired outcome, and React handles the steps behind the scenes.",
+  },
+  {
+    question: "Why is React considered a declarative framework?",
+    answer:
+      "React is declarative because it allows developers to define what the UI should look like based on the state, and React updates the DOM automatically to reflect changes, without manual DOM manipulation.",
+  },
+  {
+    question: "When would you use an imperative approach in React?",
+    answer:
+      "An imperative approach is used in React when interacting with the DOM directly, such as focusing an input or scrolling to an element, often achieved through refs.",
+  },
+  {
+    question: "How do React hooks like useRef enable imperative programming?",
+    answer:
+      "'useRef' allows access to DOM elements directly, enabling imperative commands like focus, scroll, or manipulate elements without triggering re-renders.",
+  },
+  {
+    question: "What is an example of declarative programming in React?",
+    answer:
+      "Using JSX to describe how the UI should look based on the component’s state is an example of declarative programming in React.",
+  },
+  {
+    question: "What is the purpose of a `.gitignore` file?",
+    answer:
+      "A `.gitignore` file tells Git which files or directories to ignore and not track in version control.",
+  },
+  {
+    question: "How do you create a `.gitignore` file?",
+    answer:
+      "Create a file named `.gitignore` in the project’s root directory and list the files or patterns to ignore.",
+  },
+  {
+    question:
+      "Can you stop tracking a file already committed by adding it to `.gitignore`?",
+    answer:
+      "No, you must untrack it using `git rm --cached <file>` first, then add it to `.gitignore`.",
+  },
+  {
+    question: "How do you ignore all files of a certain type in a project?",
+    answer:
+      "Add the file extension to `.gitignore`, for example, `*.log` to ignore all log files.",
+  },
+  {
+    question: "What should you do if your `.gitignore` contains wrong entries?",
+    answer:
+      "Update the `.gitignore` file, stage the changes, and commit it again.",
+  },
 ];
